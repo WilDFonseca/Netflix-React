@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+.movieRow {
+    margin-bottom: 30px;
+    padding-left: 30px;
+}
+.movieRow h2 {
+    margin: 0px, 0px, 0px, 30px;
+}
+.movieRow--listarea {
+    overflow-x: hidden;
+    padding-left: 40px;
+}
+.movieRow--list {
+    width: 99999999px;
+}
+.movieRow--item {
+    display: inline-block;
+    width: 300px;
+}
+.movieRow--item img {
+    width: 100%;
+    transform: scale(0.85);
+    padding-right: 10px;
+    transition: all ease 0.3s;
+}
+.movieRow--item img:hover {
+    transform: scale(1);
+}
+.movieRow--Name {
+    text-align: center;
+    font-family: 'Roboto';
+}

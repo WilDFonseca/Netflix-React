@@ -1,0 +1,42 @@
+/*fundo da tela principal do filme*/
+.featured {
+    height: 100vh;
+}
+.featured--vertical {
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(to top, #111 05%, transparent 95%);
+}
+.featured--horizontal {
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(to right, #111 35%, transparent 65%);
+}
+.featured--name {
+    font-size: 60px;
+    font-weight: bold;
+    margin-left: 30px;
+    Padding-top: 50px;
+}
+
+.featured--descrption,.featured--genres,.feature--points,.featured--year {
+    
+    margin-left: 30px;
+    margin-top: 30px;
+}
+.featured--descrption {
+    display: inline-block;
+    font-size: 22px;
+    max-width: 40%;
+}
+.feature--points {
+    
+    font-size: 20px;
+}
+.featured--year {
+    font-size: 16px;
+}
+.featured--genres {
+
+    font-size: 20px;
+}
