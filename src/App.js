@@ -3,6 +3,7 @@ import './App.css';
 import API_TMDB from './API_TMDB';
 import MovieRow from './components/MovieRow';
 import FeaturedMovie from './components/FeaturedMovie';
+import Header from './components/Header/Header';
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default () => {
@@ -32,6 +33,9 @@ export default () => {
 
   return (
     <div className="page">
+
+        <Header />
+
         {featuredData &&
           <FeaturedMovie item = {featuredData}/>
           }
