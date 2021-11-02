@@ -2,10 +2,10 @@
 import React from 'react';
 import './Header.css';
 
-export default () => {
+export default ({black}) => {
     return (
         /* usar styled compopnents */
-        <header className="Header--top">
+        <header className={ black ? 'black' : ''}>
             <div className="Header--logo">
                 <a href="/">
                     <img src = "https://forobeta.com/data/avatars/o/232/232295.jpg?1598895933" alt=""></img>

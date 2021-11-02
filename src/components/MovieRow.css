@@ -23,6 +23,7 @@
     transform: scale(0.85);
     padding-right: 10px;
     transition: all ease 0.3s;
+    border-radius: 30px;
 }
 .movieRow--item img:hover {
     transform: scale(1);
