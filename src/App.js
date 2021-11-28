@@ -12,7 +12,7 @@ export default () => {
   
   const [featuredData, setFeaturedData] = useState(null);
 
-  const [blackHeader, setBlackHeader] = useState(true);
+  const [blackHeader, setBlackHeader] = useState(false);
   
   useEffect(() => {
     const loadAll = async () => {
@@ -36,9 +36,9 @@ export default () => {
   useEffect(()=>{
     const scrollListner = () => {
       if (window.scrollY > 40) {
-        setBlackHeader (false);
-      } else {
         setBlackHeader (true);
+      } else {
+        setBlackHeader (false);
       }
     }
     window.addEventListener('scroll', scrollListner);
@@ -65,6 +65,12 @@ export default () => {
         )}
 
       </section>
+
+      <footer>
+        Feito com carinho <span role="img" aria-label="emoji">Emoji</span> Por Wildney D Fonseca <br/>
+        Direitos de imagem para Netflix e Willflix <br/>
+        Dados pego do site Themoviedb.org
+      </footer>
     </div>
   );
 }
