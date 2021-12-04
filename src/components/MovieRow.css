@@ -32,11 +32,14 @@
     text-align: center;
     font-family: 'Roboto';
 }
+
 .movieRow--left,.movieRow--right{
     position: absolute;
     width: 40px;
     height: 225px;
-    background-color: rgba(1,1,1, 0.7);
+    color: blueviolet;
+    background-color: #666666;
+    transform: translateY(50%);
     z-index: 99;
     display: flex;
     align-items: center;
@@ -53,6 +56,6 @@
     right: 0;
 }
 .movieRow:hover .movieRow--left,
-.movieRow:hover .movieRow--right, {
+.movieRow:hover .movieRow--right {
     opacity: 1;
 }
