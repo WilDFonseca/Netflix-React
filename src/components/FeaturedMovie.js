@@ -21,9 +21,9 @@ export default ({item}) => {
                 <div className="featured--horizontal">
                     <div className= "featured--name">{item.original_name}</div>
                     <div className= "featured--info">
-                        <div className="featured--year">Lançamento:{' '}{firstDate.getFullYear()}{','}</div>
-                        <div className= "feature--points">Nota do público:{' '}{item.vote_average} Pontos {','}</div>
-                        <div className= "featured--seasons">{item.number_of_seasons} Temporada{item.number_of_seasons !== 1 ? 's' : ''}</div>
+                        <div className="featured--year">Lançamento:{' '}{firstDate.getFullYear()}{' '}</div>
+                        <div className= "feature--points">Nota do público:{' '}{item.vote_average} Pontos {' '}</div>
+                        <div className= "featured--seasons">{item.number_of_seasons} Temporada{item.number_of_seasons !== 1 ? 's' : ' '}</div>
                     </div>
                     <div className="featured--description">{item.overview}</div>
                     <div className="featured--genres">{genres.join(', ')}</div>

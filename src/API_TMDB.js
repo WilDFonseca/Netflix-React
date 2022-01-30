@@ -1,7 +1,7 @@
 const API_key = '454d1d246aacb1276e6ac46605330acb'
 const API_base = 'https://api.themoviedb.org/3'
 
-/*1-Originais da Nteflix
+/*1-Originais da Netflix
 2-recomentadados (trending)
 3-em alta (top rated)
 */
