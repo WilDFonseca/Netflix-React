@@ -1,16 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './MovieRow.css';
 import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default ({title, items}) => {
-    
-    const handleLeftArrow = () => {
+    const [scrollX, setScrollX] = useState(-400);
 
+    const handleLeftArrow = () => { //Need FIX
+        let x = scrollX + Math.round(window.innerWidth / 2);
+        //if (x > 0 ) {
+            //x = 0;
+        //}
+        setScrollX(x);
     }
     const handleRightArrow = () => {
-
+        let x = scrollX - Math.round(window.innerWidth / 2);
+        let listW = items.results.length * 250;
+        if((window.innerWidth - listW) > x) {
+            x = (window.innerWidth - listW) - 60;
+        }
+        setScrollX(x);
     }
 
     return (
@@ -23,12 +33,14 @@ export default ({title, items}) => {
                 <NavigateNextIcon style={{fontSize: 70}} />
             </div>
             <div className="movieRow--listarea">
-                <div className="movieRow--list">
+                <div className="movieRow--list" style={{
+                    marginLeft: scrollX,
+                    width: items.results.length * 250
+                }}>
                 {items.results.length > 0 && items.results.map((item, key) => (
                     <div key={key} className="movieRow--item">
                         
                         <a href={`/Watch`}><img src={`https://image.tmdb.org/t/p/w400${item.poster_path}`} alt={item.orginal_title}/></a>
-                        {/* <div className="movieRow--Name">{item.original_name}</div> */}
                     </div>
                     
                 ))}
